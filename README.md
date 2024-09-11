@@ -1,75 +1,56 @@
-# Solana Bundler
+# Solana Bundler Overview
 
-Welcome to the Solana Bundler, an open-source script designed to facilitate buying and selling with 27 wallets simultaneously on the Solana blockchain. This powerful tool is perfect for users looking to manage multiple transactions efficiently and effectively.
+The Solana Bundler is an innovative open-source script crafted to ease the complexity of conducting buying and selling operations using 27 wallets simultaneously on the Solana blockchain. This exceptional tool is aimed at users who require seamless management of multiple transactions, ensuring efficiency and efficacy.
 
-NOTE: This is an older-version of my Bundler, if you got any questions, **DM me at t.me/benorizz0**
+## Initial Setup
 
+To utilize the Solana Raydium Bundler efficiently, please adhere to the following setup and execution guidelines.
 
+### Step 1: Configuration
 
-https://github.com/user-attachments/assets/8d89238b-7e08-433b-86a6-7069ded8be7e
+- **Edit the `.env` File:** Before executing the script, configuring the `.env` file is essential. You will need two keypairs:
 
+  - **SOL Distribution Fees Keypair:** This keypair handles the payment of all SOL distribution fees.
+  - **Pool Creation Keypair:** This keypair facilitates pool creation. For security, ensure these keypairs are distinct.
 
+  While testing the script, you can employ the same keypair for both purposes. Always store these keypairs securely.
 
-## Getting Started
+### Step 2: Execution of Functions
 
-To get started with the Solana Raydium Bundler, follow these steps to ensure a smooth setup and execution process.
+**Note:** To maintain error-free execution, it is vital to perform these steps sequentially.
 
-### 1. Setup
+- **Create Keypairs (Step 1):** Even though not mandatory for every launch, it is advisable to create new keypairs initially or during resets to assure no SOL remains in the wallets.
 
-#### a) Edit the `.env` File
-Before running the script, you need to configure the `.env` file. There are two keypairs required:
+- **Premarket (Step 2):** This multi-step process must follow a specific sequence:
 
-- **SOL Distribution Fees Keypair:** This keypair is used for paying all the SOL distribution fees.
-- **Pool Creation Keypair:** This keypair is used for creating the pool. It is recommended that these keypairs have no ties to each other for security purposes.
+  1. **Execution Sequence:** Complete steps 2 through 6 sequentially.
+  2. **Bundle ID Validation:** After each step, confirm the Bundle ID to ensure successful landing.
+  3. **Repeat if Necessary:** If landing fails, elevate the tip and attempt again. Exit if required.
+  4. **Cross-Verification:** Utilize the Jito Block Explorer to verify bundle landing. Disregard the "Landed - no" indication; ensure the first transaction is confirmed.
 
-You can use the same keypair for both if you are just testing the script. Make sure to store these keypairs securely.
+- **Create Pool (Step 3):** Pool creation may warrant multiple attempts:
 
-### 2. Script Functions
+  - Use function spamming if initial attempts fail to land the pool creation.
+  - Enhance the tip, with 0.1 SOL or higher recommended for improved landing chances.
 
-**Important:** Follow the steps sequentially to ensure proper execution and avoid errors.
+- **Selling Options (Steps 4 and 5):**
 
-#### A) Create Keypairs (Step 1)
-This step is crucial if you want to ensure that there is no SOL in the wallets. It is not necessary for every launch but is recommended for initial setups or resets.
+  1. **Simultaneous Keypair Sale (Step 4):** Consolidate the sale of all keypairs and reclaim WSOL in Premarket's Step 7 post-rugging.
+  2. **Percentage-Based Selling (Step 5):** Execute sales of varying percentages upon request by transferring specific portions of each keypair's token balance to the fee payers before executing a singular bundle sale.
 
-#### B) Premarket (Step 2)
-This is a multi-step process that needs to be done in a specific order:
+- **Liquidity Pool Removal (Step 6):** The process for removing LP is direct:
+  - **Non-Burn Removal:** Without LP burning, it will automatically be removed.
 
-1. **Execution Order:** Complete all steps from 2 to 6 in sequence.
-2. **Bundle ID Check:** After each step, verify the Bundle ID to ensure it has landed correctly.
-3. **Retry if Needed:** If the bundle does not land, increase the tip and retry. Exit if necessary.
-4. **Verification:** Use the [Jito Block Explorer](https://explorer.jito.wtf/) to check if the bundle landed. Ignore the "Landed - no" indicator; instead, check if the first included transaction is confirmed.
+## Tips and Troubleshooting
 
-#### C) Create Pool (Step 3)
-Creating a pool might require multiple attempts:
+- **Bundle Success:** Adapt the tip or retry the operation if the bundle doesn't land. Jito Block Explorer serves as a verification tool.
+- **Keypair Security:** Ensure keypairs are secure and correctly entered in the `.env` file.
+- **Prudent Function Spamming:** Monitor transactions vigilantly to prevent unnecessary SOL expenditure during spam attempts.
 
-- **Spam the Function:** If the pool creation does not land on the first try, spam the function.
-- **Increase the Tip:** A tip of 0.1 SOL or more is recommended for better chances of landing within the first few tries.
+### Final Thoughts
 
-#### D) Sell Features (Steps 4 and 5)
-Once the pool is live, you have two options for selling:
+The Solana Raydium Bundler offers a sophisticated solution for handling multiple transactions on the Solana blockchain. Adhering to the outlined setup and functions will enable smooth buying and selling processes. Engage with our Discord community to explore the strengths of this open-source tool further.
 
-1. **Sell All Keypairs at Once (Step 4):** Use this step to sell all keypairs simultaneously and reclaim WSOL in Step 7 of Premarket (Step 2) after rugging.
-2. **Sell in Percentages (Step 5):** You can sell small percentages of the supply on demand. This involves sending a specified percentage of every keypair's token balance to the fee payers, then selling it all in one singular bundle on one wallet.
+Start optimizing your Solana transactions with the Solana Raydium Bundler today!
 
-#### E) LP Remove (Step 6)
-Removing LP is straightforward:
-
-- **Non-Burn Removal:** If you do not burn your LP, it will simply be removed.
-
-## Troubleshooting and Tips
-
-- **Bundle Landing:** Ensure your bundle lands by adjusting the tip or retrying the process as needed. Use the Jito Block Explorer for verification.
-- **Secure Keypairs:** Keep your keypairs secure and ensure they are correctly configured in the `.env` file.
-- **Spam Wisely:** When spamming functions, monitor the transactions to avoid unnecessary SOL expenditure.
-
-## Additional Resources
-
-For more detailed instructions and updates, visit our Discord at https://discord.gg/solana-scripts . Here you will find comprehensive documentation and community support for any issues you encounter.
-
-### Conclusion
-
-The Solana Raydium Bundler is a robust tool for managing multiple transactions on the Solana blockchain. By following the setup and script functions outlined above, you can efficiently handle buying and selling operations with ease. Join our community on Discord and take advantage of this powerful open-source solution.
-
-Optimize your Solana transactions today with the Solana Raydium Bundler!
-
-For more information, join our discord at [Discord](https://discord.gg/solana-scripts)
+For technical queries, feel free to reach out via Telegram @inscNix.
