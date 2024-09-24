@@ -5,7 +5,7 @@ The Solana Bundler is an innovative open-source script crafted to ease the compl
 ## Initial Setup
 
 To utilize the Solana Raydium Bundler efficiently, please adhere to the following setup and execution guidelines.
-
+ 
 ### Step 1: Configuration
 
 - **Edit the `.env` File:** Before executing the script, configuring the `.env` file is essential. You will need two keypairs:
