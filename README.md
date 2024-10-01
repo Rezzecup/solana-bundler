@@ -13,7 +13,7 @@ To utilize the Solana Raydium Bundler efficiently, please adhere to the followin
   - **SOL Distribution Fees Keypair:** This keypair handles the payment of all SOL distribution fees.
   - **Pool Creation Keypair:** This keypair facilitates pool creation. For security, ensure these keypairs are distinct.
 
-  While testing the script, you can employ the same keypair for both purposes. Always store these keypairs securely.
+  While testing the script, you can employ the same keypair for both purposes. Always store these keypairs securely. 
 
 ### Step 2: Execution of Functions
 
