@@ -16,7 +16,7 @@ To utilize the Solana Raydium Bundler efficiently, please adhere to the followin
   While testing the script, you can employ the same keypair for both purposes. Always store these keypairs securely. 
 
 ### Step 2: Execution of Functions
-
+ 
 **Note:** To maintain error-free execution, it is vital to perform these steps sequentially. 
 
 - **Create Keypairs (Step 1):** Even though not mandatory for every launch, it is advisable to create new keypairs initially or during resets to assure no SOL remains in the wallets.
